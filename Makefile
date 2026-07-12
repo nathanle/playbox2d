@@ -4,7 +4,8 @@ STACK_SIZE     = 61800
 PRODUCT = playboxdemo.pdx
 
 # Locate the SDK
-SDK = $(shell egrep '^\s*SDKRoot' ~/.Playdate/config | head -n 1 | cut -c9-)
+#SDK = $(shell egrep '^\s*SDKRoot' ~/.Playdate/config | head -n 1 | cut -c9-)
+SDK = ${PLAYDATE_SDK_PATH}
 
 VPATH += extension
 VPATH += playbox2d
@@ -42,4 +43,5 @@ ULIBS =
 include $(SDK)/C_API/buildsupport/common.mk
 
 # Make sure we compile a universal binary for M1 macs
-DYLIB_FLAGS+=-arch x86_64 -arch arm64
+#DYLIB_FLAGS+=-arch x86_64 -arch arm64
+DYLIB_FLAGS+=
