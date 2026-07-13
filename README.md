@@ -15,9 +15,10 @@ sudo dnf install arm-none-eabi-gcc-cs arm-none-eabi-gcc-cs-c++ arm-none-eabi-new
 
 ## Step 2
 If you have installed the playdate SDK, you should have the following env var:
+```
 ❯ env |grep -i playdate_sdk
 PLAYDATE_SDK_PATH=/home/nathan/PlaydateSDK-3.0.6
-
+```
 The Makefile is going to use that information, so if you do not have it set, set it to point to the SDK on your system.
 
 
