@@ -13,16 +13,17 @@ sudo dnf install arm-none-eabi-gcc-cs arm-none-eabi-gcc-cs-c++ arm-none-eabi-new
 
 
 
-If you have installed the playdate SDK, you should have the following env var:
+- If you have installed the playdate SDK, you should have the following env var:
 ❯ env |grep -i playdate_sdk
 PLAYDATE_SDK_PATH=/home/nathan/PlaydateSDK-3.0.6
 
 The Makefile is going to use that information, so if you do not have it set, set it to point to the SDK on your system.
 
 
-Then you just need to run `make` in the base path of this repo.
+- Then you just need to run `make` in the base path of this repo.
 
-/playbox2d main* 
+```
+```
 ❯ make
 detected_OS is "Linux"
 mkdir -p build
@@ -30,10 +31,12 @@ mkdir -p build/dep
 cp build/pdex.elf Source/
 cp build/pdex.so Source/
 /home/nathan/PlaydateSDK-3.0.6/bin/pdc -sdkpath /home/nathan/PlaydateSDK-3.0.6 Source playboxdemo.pdx
+```
+```
 
-
-Then
-/playbox2d main* 
+- Then
+```
+```
 ❯ ./build_and_run.sh build
 
 >> Attempting a build and run of PDX...
@@ -48,3 +51,5 @@ Loading C API Library: ./Builds/playbox2d.pdx/pdex.so
 PBArray: creating with item size 8
 PBArray: creating with item size 8
 PBArray: creating with item size 152
+```
+```
