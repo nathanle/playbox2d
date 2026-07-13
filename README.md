@@ -9,8 +9,9 @@ If you get an error like this: `/usr/local/bin/arm-none-eabi-gcc: No such file o
 You will need to install `gcc-arm-none-eabi`
 
 In Fedora, that was the following dnf command:
+```
 sudo dnf install arm-none-eabi-gcc-cs arm-none-eabi-gcc-cs-c++ arm-none-eabi-newlib
-
+```
 
 
 ## Step 2
